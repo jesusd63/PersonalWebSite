@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import { Card } from 'components/card';
 import { ContextAlert } from 'components/context-alert';
-import { Markdown } from 'components/markdown';
-import { RandomQuote } from 'components/random-quote';
+import Image from 'next/image';
 import { getNetlifyContext } from 'utils';
 
 const contextExplainer = `
@@ -21,16 +20,34 @@ export default function Page() {
         <div className="flex flex-col gap-12 sm:gap-16">
             <section>
                 <ContextAlert className="mb-6" />
-                <h1 className="mb-4">Netlify Platform Starter – Next.js</h1>
-                <p className="mb-6 text-lg">
-                    Deploy the latest version of Next.js — including Turbopack, React Compiler, and the new caching APIs
-                    — on Netlify in seconds. No configuration or custom adapter required.
+                <h1 className="mb-4">Jesus Bours</h1>
+                <p className="mb-4 text-lg">
+                    I'm a software developer and this is my website. I am using Next.js and Netlify to build and host it.
                 </p>
-                <Link href="https://docs.netlify.com/frameworks/next-js/overview/" className="btn btn-lg sm:min-w-64">
-                    Read the Docs
-                </Link>
+                <section className="mb-8">
+                    <figure>
+                        <div className="relative overflow-hidden rounded-lg aspect-5/2">
+                            <Image
+                                src="/images/Graduacion.jpg"
+                                priority
+                                fill={true}
+                                style={{ objectFit: 'contain' }}
+                                sizes="(max-width: 1024px) 100vw, 1024px"
+                                alt="Me at graduation"
+                            />
+                        </div>
+                    </figure>
+                </section>
+                <div className="mb-6 flex flex-col sm:flex-col">
+                    <Link href="https://www.linkedin.com/in/jbours01/" rel="noopener" target="_blank" className="btn btn-lg sm:min-w-64 mb-6">
+                        Linkedin
+                    </Link>
+                    <Link href="https://github.com/jesusd63" rel='noopener' target="_blank" className="btn btn-lg sm:min-w-64 mb-6">
+                        GitHub
+                    </Link>
+                </div>
             </section>
-            {!!ctx && (
+            {/* {!!ctx && (
                 <section className="flex flex-col gap-4">
                     <Markdown content={contextExplainer} />
                     <RuntimeContextCard />
@@ -39,7 +56,7 @@ export default function Page() {
             <section className="flex flex-col gap-4">
                 <Markdown content={preDynamicContentExplainer} />
                 <RandomQuote />
-            </section>
+            </section> */}
         </div>
     );
 }
