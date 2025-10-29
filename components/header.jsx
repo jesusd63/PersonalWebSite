@@ -14,7 +14,7 @@ export function Header() {
     return (
         <nav className="flex flex-wrap items-center gap-4 pt-6 pb-12 sm:pt-6 md:pb-6">
             {!!navItems?.length && (
-                <ul className="flex flex-wrap gap-x-4 gap-y-1">
+                <ul className="flex flex-wrap gap-x-4 gap-y-1 text-[#EF233C]">
                     {navItems.map((item, index) => (
                         <li key={index}>
                             <Link href={item.href}>
@@ -27,7 +27,7 @@ export function Header() {
             <Link
                 href="https://github.com/jesusd63/PersonalWebSite"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener"
                 className="hidden lg:inline-flex lg:ml-auto"
             >
                 <Image src={githubLogo} alt="GitHub logo" className="w-7" />

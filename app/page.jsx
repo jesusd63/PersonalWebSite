@@ -3,6 +3,7 @@ import { Card } from 'components/card';
 import { ContextAlert } from 'components/context-alert';
 import Image from 'next/image';
 import { getNetlifyContext } from 'utils';
+import { EmailButton } from 'components/emailButton';
 
 const contextExplainer = `
 The card below is rendered on the server based on the value of \`process.env.CONTEXT\` 
@@ -22,7 +23,7 @@ export default function Page() {
                 <ContextAlert className="mb-6" />
                 <h1 className="mb-4">Jesus Bours</h1>
                 <p className="mb-4 text-lg">
-                    I'm a software developer and this is my website. I am using Next.js and Netlify to build and host it.
+                    I'm a software developer and this is my website! I am using Next.js and Netlify to build and host it.
                 </p>
                 <section className="mb-8">
                     <figure>
@@ -45,18 +46,9 @@ export default function Page() {
                     <Link href="https://github.com/jesusd63" rel='noopener' target="_blank" className="btn btn-lg sm:min-w-64 mb-6">
                         GitHub
                     </Link>
+                    <EmailButton className="btn btn-lg sm:min-w-64 mb-6"> Email </EmailButton>
                 </div>
             </section>
-            {/* {!!ctx && (
-                <section className="flex flex-col gap-4">
-                    <Markdown content={contextExplainer} />
-                    <RuntimeContextCard />
-                </section>
-            )}
-            <section className="flex flex-col gap-4">
-                <Markdown content={preDynamicContentExplainer} />
-                <RandomQuote />
-            </section> */}
         </div>
     );
 }
