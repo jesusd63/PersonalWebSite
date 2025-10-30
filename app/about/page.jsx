@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default async function Page() {
     return (
-        <>
+        <div className="text-center" >
             <h1 className="mb-8">About Me</h1>
             <section>
                 <p className="mb-4 text-lg">
@@ -16,7 +16,7 @@ export default async function Page() {
                 </p>
                 <section className="mb-8">
                     <figure>
-                        <div className="relative overflow-hidden rounded-lg aspect-8/2">
+                        <div className="relative overflow-hidden rounded-lg aspect-6/2">
                             <Image
                                 src="/images/GirlsYJero.jpg"
                                 priority
@@ -31,15 +31,17 @@ export default async function Page() {
                 <p className="mb-4 text-lg">
                     If you'd like to know what kind of movies I like, you can check out my letterboxd profile!
                 </p>
-                <Link href="https://letterboxd.com/GhostMopey115/" rel='noopener' target="_blank" className="btn btn-lg sm:min-w-64 mb-6 bg-[#ff8000]">
-                        Letterboxd
-                </Link>
+                <section className="relative justify-center flex">
+                    <Link href="https://letterboxd.com/GhostMopey115/" rel='noopener' target="_blank" className="btn btn-lg sm:min-w-64 mb-6 bg-[#ff8000]">
+                            Letterboxd
+                    </Link>
+                </section>
                 <p className="mb-4 text-lg">
                     I also have a lovely girlfriend who supports me a lot!
                 </p>
                 <section className="mb-8">
                     <figure>
-                        <div className="relative overflow-hidden rounded-lg aspect-8/2">
+                        <div className="relative overflow-hidden rounded-lg aspect-6/2">
                             <Image
                                 src="/images/Alexia_Yo.jpg"
                                 priority
@@ -55,6 +57,6 @@ export default async function Page() {
                     Thank you for visiting my website. If you'd like to get in touch, please don't hesitate to reach out!
                 </p>
             </section>
-        </>
+        </div>
     );
 }
