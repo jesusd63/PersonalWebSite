@@ -1,6 +1,7 @@
 import Image from "next/image";
+import { GridList } from "./gridList";
 
-export function Project({title, description, link, date, technologies, projectLink, img, alt}) {
+export function Project({title, description, link, date, technologies, technologies_img, projectLink, img, alt}) {
     return (
         <div>
             <div className="flex flex-row gap-10 mb-6 text-center justify-center">
@@ -28,13 +29,7 @@ export function Project({title, description, link, date, technologies, projectLi
                 Technologies Used:
             </h3>
             {technologies && (
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                    {technologies.map((tech) => (
-                        <div key={tech} className=" bg-[var(--color-other)] p-4">
-                        <h3 className="text-[var(--color-black)]">{tech}</h3>
-                        </div>
-                    ))}
-                </div>
+                <GridList items={technologies} imgSrc={technologies_img} />
             )}
             <div className="flex flex-row justify-center gap-8">
                 {link && (

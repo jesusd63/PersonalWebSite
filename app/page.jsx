@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { Card } from 'components/card';
-import { ContextAlert } from 'components/context-alert';
 import Image from 'next/image';
 import { getNetlifyContext } from 'utils';
 import { EmailButton } from 'components/emailButton';
@@ -20,7 +19,6 @@ export default function Page() {
     return (
         <div className="flex flex-col gap-12 sm:gap-16 text-center">
             <section>
-                <ContextAlert className="mb-6" />
                 <h1 className="mb-4">Jesus Bours</h1>
                 <p className="mb-4 text-lg">
                     I'm a software developer and this is my website! I am using Next.js and Netlify to build and host it.

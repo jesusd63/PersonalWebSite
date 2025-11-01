@@ -1,5 +1,29 @@
 import { Project } from "components/project";
 
+const p1 = [
+    { title: "Azure", imgSrc: "/images/Azure.png" },
+    { title: "Modal", imgSrc: "/images/Modal.webp" },
+    { title: "HuggingFace", imgSrc: "/images/HuggingFace.png" },
+    { title: "Python", imgSrc: "/images/Python.png" },
+    { title: "Unsloth", imgSrc: "/images/Unsloth.png" },
+    { title: "Flask", imgSrc: "/images/Flask.png" },
+]
+
+const p2 = [
+    { title: "Oracle Cloud Infrastructure", imgSrc: "/images/OracleCloud.png" },
+    { title: "Java", imgSrc: "/images/Java.png" },
+    { title: "Spring", imgSrc: "/images/Spring.png" },
+    { title: "React", imgSrc: "/images/React.png" },
+    { title: "Docker", imgSrc: "/images/Docker.png" },
+    { title: "Kubernetes", imgSrc: "/images/Kubernetes.png" },
+]
+
+const p3 = [
+    { title: "Google Firebase", imgSrc: "/images/Firebase.png" },
+    { title: "React Native", imgSrc: "/images/React.png" },
+    { title: "React", imgSrc: "/images/React.png" },
+]
+
 export default async function Page() {
     return (
         <div className="text-center">
@@ -12,7 +36,8 @@ export default async function Page() {
                 link="https://github.com/Talent-Pentagon/JesusEnriqueDiazBernalRobinsonBours"
                 projectLink="https://link.springer.com/chapter/10.1007/978-3-032-09044-7_9"
                 date="03/25 - 06/25"
-                technologies={["Azure", "Modal", "HuggingFace", "Python", "Unsloth", "Flask"]}
+                technologies={p1.map(item => item.title)}
+                technologies_img={p1.map(item => item.imgSrc)}
                 img ="/images/PentagonTeam.jpg"
                 alt="The team at a project presentation"
             />
@@ -24,7 +49,8 @@ export default async function Page() {
                 with a team using scrum framework"
                 link="https://github.com/juanjosalco/Oracle_Java_Bot"
                 date="02/24 - 05/24"
-                technologies={["Oracle Cloud Infrastructure", "Java", "Spring", "React", "Docker", "Kubernetes"]}
+                technologies={p2.map(item => item.title)}
+                technologies_img={p2.map(item => item.imgSrc)}
                 img="/images/Orabot_Pipeline.jpg"
                 alt="Oracle ChatBot Pipeline Diagram"
             />
@@ -36,7 +62,8 @@ export default async function Page() {
                 Implemented secure 2FA Worked with an agile framework"
                 link="https://github.com/orgs/BAMX-Food-Bank-Application/repositories"
                 date="08/23 - 11/23"
-                technologies={["Google Firebase", "React Native", "React"]}
+                technologies={p3.map(item => item.title)}
+                technologies_img={p3.map(item => item.imgSrc)}
                 img="/images/BAMXTeam.jpg"
                 alt="Team presenting the Mexican Food Bank App"
             />
